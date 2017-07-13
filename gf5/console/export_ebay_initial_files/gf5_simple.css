@@ -1,0 +1,585 @@
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	margin:0px;
+	/* background-color:#FCF9F2; */
+	}
+
+
+.objectWrapper{
+	background-color:#ccc;
+	min-height:400px;
+	}
+.data0 .alt td{
+	background-color:whitesmoke;
+	}
+.data0 td{
+	padding:2px 0px 1px 1px;
+	background-image:url("/images/i/grad/linedottedhoriz-CCC.png");
+	background-repeat:repeat-x;
+	background-position:bottom;
+	}
+
+.red{
+	color:darkred;
+	}
+
+
+
+.mainGroups{
+	padding:15px 25px;
+	}
+.mainGroups legend{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:119%;
+	}
+.popup{
+	background-image:url("/images/assets/popup-link.png");
+	background-repeat:no-repeat;
+	background-position:top right;
+	padding-right:13px;
+	}
+@media screen{
+	.printhide{
+		/* display:inherit; */
+		}
+	.screenhide{
+		display:none;
+		}
+}
+@media print{
+	.printhide{
+		display:none;
+		}
+	.screenhide{
+		/* display:inherit; */
+		}
+}
+#mainWrap{
+	width:1150px;
+	margin:3px auto;
+	}
+.objectWrapper{
+	padding:0px;
+	}
+.strongLegend{
+	font-size:127%;
+	font-weight:900;
+	}
+#staffOptions{
+	}
+#staffOptions li{
+	display:inline;
+	background-color:peru;
+	padding:3px 6px 1px 6px;
+	}
+#staffOptions a{
+	color:#000;
+	}
+
+
+#topLogo{
+	float:left;
+	background-color:#fff;
+	}
+#properties{
+	}
+a{
+	color:darkgreen; /* firebrick; /*#735317;*/
+	text-decoration:none;
+	}
+a:hover{
+	text-decoration:underline;
+	}
+#headerBar1{
+	padding:5px 10px 10px 12px;
+	color:#FFF;
+	background-color:darkolivegreen; /* #160168;
+	/* */
+	background-image:url("/images/i/grad/v-ffffffff-ffffff00-oso64.png");
+	background-position:0px -35px;
+	background-repeat:repeat-x;
+	/* */
+	}
+#headerBar1 h3{
+	font-size:149%;
+	color:#fff;
+	}
+
+#headerContent1{
+	text-align:right;
+	background-image:url("/images/i/grad/v-606883-24262a-oso40.png");
+	background-repeat:repeat-x;
+	}
+#hdrClear{
+	clear:both;
+	height:1px;
+	}
+#headerContent2{
+	clear:both;
+	border-top:1px solid white;
+	padding-left:25px;
+	border-bottom:1px solid #232529;
+	}
+#searchInset .btnA{
+	border:1px solid  #232529;
+	font-size:12px;
+	margin:0px;
+	margin-top:2px;
+	}
+#searchInset .btnB{
+	border:1px solid #232529;
+	font-size:11px;
+	background-color:#836235;
+	color:white;
+	font-family:tahoma, arial;
+	margin:0px;
+	}
+#signinStatus{
+	color:#FFF;
+	padding:15px 0px 0px 0px;
+	text-align:right;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:109%;
+	}
+#signinStatus a{
+	color:#FFF;
+	}
+.mainHeader{
+	font-weight:400;
+	margin:7px 0px 0px 25px;
+	float:left;
+	color:#FFF;
+	}
+p{
+	margin-top:0px;
+	margin-right:0px;
+	margin-left:0px;
+	margin-bottom:5px;
+	padding:0px;
+	}
+table{
+	border-collapse:collapse;
+	}
+sup{
+	font-size:9px;
+	line-height:1px;
+	}
+
+/* these replace .subheadline styles from old sheet */
+h1, h2, h3, h4, h5 {
+	font-family: Arial, Helvetica, Sans-serif, Georgia, Serif;
+	/*color:#5a3500;*/
+	margin-bottom:5px;
+	}
+h1{
+	font-size: 159%;
+	font-style: normal;
+	font-weight: bold;
+	}
+h2{
+	font-size: 134%;
+	font-style: normal;
+	font-weight: bold;
+	}
+h3{
+	font-size: 123%;
+	font-style: normal;
+	font-weight:400;
+	}
+h4{
+	font-size: 114%;
+	font-style: normal;
+	font-weight:400;
+	}
+h5{
+	font-size: 109%;
+	font-style: normal;
+	font-weight:400;
+	}
+#mainBody{
+	padding:15px 15px 15px 25px;
+	}
+#leftNav{
+	float:left;
+	width:180px;
+	background-color:cornsilk;
+	padding:10px 5px;
+	}
+#leftNav li{
+	list-style:none;
+	}
+#mainContent{
+	float:left;
+	width:600px;
+	margin-left:20px;
+	}
+#footer{
+	clear:both;
+	padding:10px 25px;
+	color:#aaa;
+	
+	}
+#ver{
+	font-size:9px;
+	background-color:THISTLE;
+	border:1px solid #000;
+	}
+#ver option{
+	background-color:#A05EAE;
+	}
+#showTester{
+	cursor:pointer;
+	background-color:#CCC;
+	width:5px;
+	height:5px;
+	font-size:5px;
+	}
+#tester{
+	display:none;
+	background-color:#8A9887;
+	border:1px solid #000;
+	padding:5px;
+	}
+.largerLegend{
+	font-size:119%;
+	font-weight:900;
+	}
+.larger{
+	font-size:129%;
+	font-weight:400;
+	}
+.textBox{
+	border:1px solid #999;
+	padding:15px;
+	margin:10px 0px;
+}
+.commentsInset{
+	float:right;
+	padding:12px 0px 10px 15px;
+	width:275px;
+	margin:0px 5px 5px 5px;
+	border:1px solid #CCC;
+	color:DARKRED;
+	background:#FEE
+	}
+
+.dynExpTA{
+	/* created 2009-12-03 - dynamically expanding textarea - values below WORK but widths and sizes could be modified per page */
+	/*line-height: 1; */
+	overflow-y:hidden;
+	padding:7px 5px;
+	background-color:papayawhip;
+	margin-bottom:30px;
+	width:600px;
+	font-family:Arial, Helvetica, sans-serif; 
+	font-size:13px; 
+	border:1px solid #ccc;
+	/*
+	height: 16px;
+	*/
+	}
+
+
+/* basic positioning and sizing elements */
+.fr{ float:right; padding-left:15px; }
+.fl{ float:left; padding-right:15px; }
+.cb{ clear:both; }
+.sm{ font-size:smaller; }
+.tc{ text-align:center; }
+.tr{ text-align:right; }
+
+
+/* ---------- "alligator" style ------------ */
+.alligator{
+	color:#272727;
+	}
+.alligator h2{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	margin-bottom:10px;
+	}
+.alligator #heading{
+	background-color:#f6f7fb;
+	padding:15px;
+	margin-bottom:10px;
+	}
+.alligator .subhdr td{
+	background-color:#F0FFF8;
+	}
+.alligator .subhdr td.foc{
+	background-color:THISTLE;
+	}
+.alligator .subhdr h4{
+	font-family:Arial;
+	font-weight:900;
+	}
+.alligator .homeCtrls{
+	/* margin-left:45px; */
+	}
+.alligator .reportAligner{
+	}
+.alligator .reportAligner td{
+	padding:1px 4px 3px 8px;
+	border-bottom:1px dotted #272727;
+	}
+.alligator .children{
+	clear:both;
+	margin-bottom:20px;
+	}
+.alligator #parents, .alligator #children{
+	margin-bottom:25px;
+	/*clear:both;*/
+	}
+.alligator #parentsList, .alligator #childrenList{
+	margin-left:15px;
+	}
+.alligator .parent{
+	margin-left:15px;
+	}
+.alligator .reportLiner a{
+	color:#383C49;
+	font-size:85%;
+	}
+.alligator .reportLiner .ProgressNotes{
+	}
+.alligator .reportLiner .IncidentReport{
+	}
+.alligator .reportLiner .RestraintReport{
+	}
+.alligator .reportLiner .logs td{
+	border-bottom:1px dotted #272727;
+	padding:1px 3px 0px 7px;
+	}
+.alligator .reportLiner .indent{
+	width:25px;
+	border-bottom:1px dotted #FFF;
+	}
+.alligator .reportLiner .child td{
+	background-color:#F2F4FC;
+	}
+.alligator .reportLiner .child td{
+	border-bottom:1px solid #272727;
+	}
+.alligator .reportLiner .child, .alligator .reportLiner .logs{
+	cursor:pointer;
+	}
+.alligator .reportLiner a{
+	/* color:inherit; */
+	}
+.alligator .reportLiner .alt1{
+	background-color:#F0F0F0;
+	}
+.alligator .childHdrCell{
+	padding:1px 5px 1px 7px;
+	}
+.alligator .childHdrCell .name{
+	font-size:109%;
+	}
+.alligator .semi{
+	-moz-opacity:0.5;
+	opacity:0.5;
+	}
+/*------------------ end alligator -------------------- */
+
+
+#tabs{
+	border-bottom:1px solid #444;
+	background-color:gold;
+	}
+#tabs a{
+	color:inherit;
+	text-decoration:none;
+	line-height:115%;
+	}
+#tabs li{
+	display:inline;
+	padding:0px 15px 0px 8px;
+	}
+.tabactive{
+	background-color:#CCC;
+	border:1px solid darkred;
+	cursor:default;
+	}
+.tabinactive{
+	background-color:#FFF;
+	border:1px solid #444;
+	cursor:pointer;
+	}
+.tabactive a{
+	cursor:default;
+	}
+.contentTab{
+	padding:15px 25px;
+	}
+.calIcon{
+	cursor:pointer;
+	width:28px;
+	margin:1px 4px 0px 4px;
+	}
+.Button_A{
+	background-color:midnightblue;
+	border:medium none;
+	color:white;
+	cursor:pointer;
+	padding:2px 7px;
+	background-image:url('../images/i/grad/grad-uc.gif');
+	background-repeat:repeat-x;
+	}
+.Button_B{
+	background-color:white;
+	border:1px solid midnightblue;
+	color:midnightblue;
+	cursor:pointer;
+	padding:2px 7px;
+	}
+.ghost{
+	color:#AAA;
+	}
+
+
+
+.complexReport{
+	border-collapse:collapse;
+	}
+.complexReport th{
+	padding:3px 4px 1px 10px;
+	border-bottom:1px solid #000;
+	}
+.complexReport td{
+	padding:3px 4px 1px 10px;
+	border-bottom:1px dotted #ccc;
+	}
+.complexReport th.first, .complexReport td.first{
+	padding-left:7px;
+	}
+.complexReport a{
+	color:#007;
+	}
+.complexReport .sbt td{
+	border-top:1px solid #000;
+	border-bottom:none;
+	}
+.complexReport .noline td{
+	border-bottom:none;
+	}
+.complexReport .normal td{
+	}
+.complexReport .highlight td{
+	background-color:thistle;
+	}
+
+.reportLink{
+	color:#000;
+	}
+.balloon1{
+	border:1px dotted #000;
+	background-color:papayawhip;
+	padding:8px;
+	padding-left:45px;
+	background-image:url('/images/i/alert.png');
+	background-repeat:no-repeat;
+	background-position:5px 5px;
+	font-weight:400;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+.passed{
+	color:darkgreen;
+	}
+.failed{
+	color:darkred;
+	}
+
+/* sothing menu elements */
+td.st_tdcss font{
+	padding:0px 17px;
+	background-image:url("/images/i/arrows/whitesquare-2x2.gif");
+	background-position:10px 8px;
+	background-repeat:no-repeat;
+	}
+.st_ftcss{
+	padding:0px 5px;
+	}
+#invoiceList_showing{
+	display:none;
+	}
+
+
+.yat{
+	border-collapse:collapse;
+	}
+.yat th{
+	padding:3px 5px 1px 2px;
+	}
+.yat td{
+	padding:3px 5px 1px 2px;
+	}
+.yat td, .yat td.printhide{
+	padding:3px 5px 1px 2px;
+	border-bottom:1px solid #ddd;
+	}
+.yat .alt td{
+	background-color:whitesmoke;
+	}
+.yat .nobo td{
+	border-bottom:none;
+	}
+.yat .topborder td{
+	border-top:1px solid #000;
+	}
+
+
+.subTable1{
+	border-collapse:collapse;
+	width:100%;
+	}
+.subTable1 th{
+	background-image:url("/images/i/grad/v-eee9d5-ded689-oso40.png");
+	background-position:0px -15px;
+	background-repeat:repeat-x;
+	}
+.subTable1 td, .subTable1 th{
+	padding:2px 4px 1px 5px;
+	}
+.subTable1 td{
+	background-image:url("/images/i/grad/linedottedhoriz-444.png");
+	background-position:bottom left;
+	background-repeat:repeat-x;
+	}
+.subTable1 td.alt{
+	background-color:ghostwhite;
+	}
+.subTable1 tfoot td div{
+	border:1px solid #333;
+	padding:12px;
+	margin-top:10px;
+	background-color:cornsilk;
+	}
+
+
+
+sup.basic{
+	font-size:10px;
+	font-weight:400;
+	}
+.spacer th{
+	border-bottom:1px solid #000;
+	}
+.spacer a{
+	color:black;
+	}
+.spacer a:hover{
+	color:darkgreen;
+	}
+.spacer td{
+	border-bottom:1px solid #eee;
+	padding:1px 2px 1px 4px;
+	}
+
+#mainBody h1{
+	margin-top:0px;
+	}
+input, textarea, select {
+    font-size: 13px;
+    padding: 2px 5px;
+	}

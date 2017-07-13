@@ -1,0 +1,6 @@
+ErrorDocument 404 /gf5/console/404.php
+php_value error_reporting 7
+php_flag display_errors On
+php_flag register_globals On
+php_value magic_quotes_gpc On
+

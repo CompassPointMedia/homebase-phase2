@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Google Maps JavaScript API Example - GPolygon Generator</title>
+    <style type="text/css">
+    v\:* {
+      behavior:url(#default#VML);
+    }
+    body {
+      font-family:Arial,Helvetica,Sans Serif;
+      font-size:10pt;
+    }
+    </style>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyB5vTwnNiqmAZnx8OmDXusVB-C3vGxLBVM"
+            type="text/javascript"></script>
+    <script type="text/javascript">
+    //<![CDATA[
+
+    var map;
+
+    function load() {
+      if (GBrowserIsCompatible()) {
+        map = new GMap2(document.getElementById("map"));
+        map.setCenter(new GLatLng(37.4419, -122.1419), 13);
+	map.addControl(new GLargeMapControl());
+	GEvent.addListener(map, 'click', mapClick);
+      }
+    }
+
+    /** Utility Functions **/
+   // rand - Generates random number from 1 to n, inclusive
+    function rand ( n )
+    {
+      return ( Math.floor ( Math.random ( ) * n + 1 ) );
+    }
+
+   // byte2hex - Takes number n from 0-255 and converts to hexadecimal string e.g. 'AA'
+   // Courtesy Jim Bumgardner of krazydad.com
+   function byte2Hex(n)
+   {
+    var nybHexString = "0123456789ABCDEF";
+    return String(nybHexString.substr((n >> 4) & 0x0F,1)) + nybHexString.substr(n & 0x0F,1);
+   }
+
+   // RGB2Color - Takes 3 hexadecimal string color components and concatenates into standard HTML format
+   // Courtesy Jim Bumgardner of krazydad.com
+   function RGB2Color(r,g,b)
+   {
+    return '#' + byte2Hex(r) + byte2Hex(g) + byte2Hex(b);
+   }
+
+
+   // mapClick - Handles the event of a user clicking anywhere on the map
+   // Draws either stars or polygons with random variation in arguments
+   // with clicked point as center.
+
+    function mapClick(overlay, clickedPoint) {
+	var polyPoints = Array();
+
+	var mapNormalProj = G_NORMAL_MAP.getProjection();
+	var mapZoom = map.getZoom();
+        var clickedPixel = mapNormalProj.fromLatLngToPixel(clickedPoint, mapZoom);
+
+	var polySmallRadius = rand(60) + 20;
+	var polyLargeRadius = polySmallRadius*2 + rand(40);
+	var polyNumSides = rand(8) + 2;
+	var polySideLength = 360/polyNumSides;
+	var polyColor = RGB2Color(rand(255),rand(255),rand(255));
+	
+	var starMode = document.getElementById("drawMode_stars").checked;
+        var polyMode = document.getElementById("drawMode_polys").checked;
+	if(starMode){
+          document.getElementById("status").innerHTML = "Drew <strong>star</strong> with <strong>" + polyNumSides + "</strong> sides, <strong>" + polyColor + "</strong> fill, <strong>" + polySmallRadius + "</strong> small radius, and <strong>" + polyLargeRadius + "</strong> large radius.";
+
+     	  for (var a = 0; a<(polyNumSides*2+1); a++) {
+	    var aRad = polySideLength/2*a*(Math.PI/180);
+	    var polyRadius = polySmallRadius; 
+	    if(a%2==1){ // if a is odd, use the large radius
+	      polyRadius = polyLargeRadius;
+	    }	
+       	    var pixelX = clickedPixel.x + polyRadius * Math.cos(aRad);
+	    var pixelY = clickedPixel.y + polyRadius * Math.sin(aRad);
+	    var polyPixel = new GPoint(pixelX,pixelY);
+	    var polyPoint = mapNormalProj.fromPixelToLatLng(polyPixel,mapZoom);
+	    polyPoints.push(polyPoint);
+	  }
+	} else if(polyMode){ // polygon mode
+          document.getElementById("status").innerHTML = "Drew <strong>polygon</strong> with <strong>" + polyNumSides + "</strong> sides, <strong>" + polyColor + "</strong> fill, and <strong>" + polySmallRadius + "</strong> radius.";
+
+     	  for (var a = 0; a<(polyNumSides+1); a++) {
+	    var aRad = polySideLength*a*(Math.PI/180);
+	    var polyRadius = polySmallRadius; 
+       	    var pixelX = clickedPixel.x + polyRadius * Math.cos(aRad);
+	    var pixelY = clickedPixel.y + polyRadius * Math.sin(aRad);
+	    var polyPixel = new GPoint(pixelX,pixelY);
+	    var polyPoint = mapNormalProj.fromPixelToLatLng(polyPixel,mapZoom);
+	    polyPoints.push(polyPoint);
+	  }
+	} else { // circle mode
+          polyNumSides = 20;
+          polySideLength = 18;
+          document.getElementById("status").innerHTML = "Drew <strong>circle</strong> with <strong>" + polyNumSides + "</strong> sides, and <strong>" + polyColor + "</strong> fill.";
+
+     	  for (var a = 0; a<(polyNumSides+1); a++) {
+	    var aRad = polySideLength*a*(Math.PI/180);
+	    var polyRadius = polySmallRadius; 
+       	    var pixelX = clickedPixel.x + polyRadius * Math.cos(aRad);
+	    var pixelY = clickedPixel.y + polyRadius * Math.sin(aRad);
+	    var polyPixel = new GPoint(pixelX,pixelY);
+	    var polyPoint = mapNormalProj.fromPixelToLatLng(polyPixel,mapZoom);
+	    polyPoints.push(polyPoint);
+	  }
+        }	
+	var polygon = new GPolygon(polyPoints,"#000000",2,.5,polyColor,.5);
+	map.addOverlay(polygon);
+     }
+
+    function clearShapes(){
+	map.clearOverlays();
+    }
+
+    //]]>
+    </script>
+  </head>
+  <body onload="load()" onunload="GUnload()">
+    Draw mode: 
+   <input type="radio" name="drawMode" id="drawMode_stars" value="stars" checked /> Stars
+   <input type="radio" name="drawMode" id="drawMode_polys" value="polys"/> Polygons
+   <input type="radio" name="drawMode" id="drawMode_circles" value="circles"/> Circles
+   &nbsp;&nbsp;
+   <input type="button" onclick="clearShapes();" value="Clear Shapes"/>
+    <br/><br/>
+    <div id="map" style="width: 500px; height: 300px"></div>
+    <br/>
+    <div id="status" style="width:500px; height: 60px;">Click a draw mode & start clicking away!</div>
+  </body>
+</html>
+

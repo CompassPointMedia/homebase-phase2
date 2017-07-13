@@ -1,0 +1,409 @@
+/*
+css layout template for relatebase_05_generic.php template
+2011-12-09 
+	* added "initial identification borders and 2px margins to key divs so that I can find things
+	* 
+
+
+*/
+body{
+	}
+
+
+
+body a{
+	color:#326822;
+	}
+
+
+
+body a:hover{
+	}
+
+
+
+
+/* ---------- begin main regions for the template ------------ */
+#mainWrap{
+	background-image:url("/images/assets/05-03f-top-band.png");
+	background-position:top center;
+	background-repeat:no-repeat;
+	min-height:400px;
+	margin:0px;
+	padding:0px;
+	width:100%;
+
+	}
+
+
+
+#mainWrapSub{
+	width:976px;
+	margin:0px auto;
+	padding-top:60px;
+	min-height:400px;
+	}
+#topRegion{
+	background-image:url("/images/assets/05-03f-masthead.png");
+	background-repeat:no-repeat;
+	height:200px;
+	position:relative;
+
+	}
+
+
+
+#topRegion a{
+	}
+
+
+
+#topRegion a:hover{
+	}
+
+
+
+#topRegionLogo{
+	position:absolute;
+	top:-20px;
+	left:365px;
+	z-index:9000;
+	}
+#topRegionSlogan{
+	position:absolute;
+	top:0px;
+	left:0px;
+	}
+#topRegionCtrl{
+	display:none;
+	/*
+	min-width:100px;
+	min-height:40px;
+	margin:2px;
+	position:absolute;
+	top:-60px;
+	right:5px;
+	float:right;
+	*/
+	}
+#topRegionSNW{
+	position:absolute;
+	top:-40px;
+	right:0px;
+	outline:1px dashed darkred;
+	}
+#SNWBackground{
+	}
+#topRegionNav{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:40px;
+	padding:0px;
+	background-color:rgba(0,0,0,0.7);
+	}
+#mainRegionSubLayer{
+	}
+#mainRegion{
+	position:relative;
+	margin:0px 8px;
+	min-height:500px;
+
+	}
+
+
+
+#mainRegion a{
+	}
+
+
+
+#mainRegion a:hover{
+	}
+
+
+
+#mainRegionIntro{
+	position:absolute;
+	left:270px;
+	top:14px;
+	width:728px;
+	}
+#mainRegionLeft{
+	position:relative;
+	padding-top:15px;
+	color:white;
+	float:left;
+	background-color:#326822;
+	border-radius:0px 0px 10px 10px;
+	width:240px;
+	background-image:url("/images/assets/leftbg.png");
+	padding-bottom:100px;
+	background-repeat:no-repeat;
+	min-height:350px;
+	margin-bottom:20px;
+	margin-top:10px;
+	}
+#mainRegionLeftIntro{
+	margin-bottom:25px;
+	padding-left:8px;
+	}
+#mainRegionLeftContent{
+	padding-left:8px;
+	}
+#mainRegionCenter{
+	min-height:350px;
+	width:700px;
+	background-color:rgba(255,255,255,0.8);
+	background-color:#fff;
+	float:left;
+	margin-left:20px;
+	min-height:400px;
+	margin-top:10px;
+	margin-bottom:20px;
+	padding-top:40px;
+	}
+#mainRegionCenterIntro{
+	display:none;
+	}
+#mainRegionCenterContent{
+	padding:20px;
+	}
+#mainRegionCenterContentInset{
+	float:right;
+	width:250px;
+	padding-left:20px;
+	display:none;
+	}
+#bottomRegion{
+	color:white;
+	background-color:#326822;
+	min-height:250px;
+	background-image:url("/images/cpm208/footergrad.jpg");
+	background-repeat:repeat-x;
+
+	}
+
+
+
+#bottomRegion a{
+	color:burlywood;
+	}
+
+
+
+#bottomRegion a:hover{
+	}
+
+
+
+#footer{
+	text-align:center;
+	width:982px;
+	margin:0px auto;
+	padding:0px 0px 7px 0px;
+	}
+#footer a{
+	}
+/* ---------------- end main regions ---------------------- */
+
+
+
+#topRegion ul, #mainRegionLeft ul{
+	list-style:none inside none;
+	}
+#topRegion li{
+	display:inline;
+	padding:2px 5px;
+	}
+
+
+
+
+
+
+/* ----------------- additional classes and id's ---------------- */
+
+
+
+
+
+/* ---------- these elements are abs. positioned and outside HTML flow ----------- */
+#pushBg{
+	position:absolute;
+	left:25px;
+	top:25px; /* -- dim.A -- */
+	filter:alpha(opacity=62);
+	-moz-opacity:.62;
+	opacity:.62;
+	width:806px;
+	min-height:200px;
+	padding:10px 20px;
+	background-color:#688a0f;
+	}
+#push{
+	position:absolute;
+	z-index:100;
+	left:0px;
+	top:0px;
+	width:898px;
+	}
+#ppad{
+	padding:25px; /* -- dim.A -- */
+	}
+.cal10 td{
+	border:1px solid black;
+	border-collapse:collapse;
+	
+}
+#calGrid{
+	padding:0px;
+	}
+.today{
+	background-color:gray;
+	}
+.noday{
+	background-color:teal;
+	}
+/* ----------- for admin mode toolbar ----------- */
+#adminMode{
+	background-color:#777;
+	border:1px solid #000;
+	padding:0px 5px;
+	color:WHITE;
+	font-family:Arial;
+	position:fixed;
+	top:15px;
+	left:15px;
+	text-align:left;
+	width:275px;
+	-moz-opacity:.85;
+	}
+#adminModeExit{
+	float:right;
+	padding:0px 2px;
+	margin:1px;
+	border:1px solid WHITE;
+	font-weight:900;
+	font-family:Arial;
+	}
+#adminModeExit a{
+	color:#FFF;
+	text-align:center;
+	font-size:9px;
+	}
+.amBtn{
+	float:right;
+	padding:0px 2px;
+	margin:1px;
+	border:1px solid WHITE;
+	font-weight:900;
+	font-family:Arial;
+	}
+.amBtn a{
+	color:#FFF;
+	text-align:center;
+	font-size:9px;
+	font-weight:900;
+	padding:0px 3px;
+	}
+textarea.amFlds{
+	font-size:11px;
+	line-height:13px;
+	width:250px;
+	border:1px solid #000;
+	}
+
+
+#topRegionNav table{
+	}
+#topRegionNav td{
+	background-color: #50623C;
+	font-size: 120%;
+	color: white;
+	width: 13%;
+	border-right: 1px solid #1D251A;
+	border-bottom: 1px solid #131B10;
+	border-left: 1px solid #7C8870;
+	border-top: 1px solid #AFBAAA;
+	vertical-align: middle;
+	font-family: "times new roman";
+	font-weight: 600;
+}
+#mainRegionCenterContent h1{
+	margin-top:0px;
+	}
+#mainRegionCenter h1{
+	margin-top:0px;
+	padding-top:0px;
+	}
+#mainRegionIntro ul{
+	list-style:none;
+	margin:0px;
+	padding:0px;
+	font-size:13px;
+
+	}
+#mainRegionIntro li{
+	font-family:Helvetica;
+	font-variant:small-caps;
+	border-radius:3px;
+	display:block;
+	font-weight:bold;
+	float:left;
+	border:1px solid #666;
+	margin-right:10px;
+	padding:3px 7px;
+	background-color:#444;
+	}
+#mainRegionLeft a{
+	color:white;
+	}
+#mainRegionLeft a:hover{
+	text-decoration:underline;
+	}
+#mainRegionIntrol li a{
+	color:#369;
+	}
+#mainRegionIntro li a{
+	color:#fff;
+	}
+#mainRegionIntro li a:hover{
+	text-decoration:none;
+	}
+#topRegionInset{
+	position:absolute;
+	right:0px;
+	top:40px;
+	}
+#topRegionNav .navRight{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:9500;
+	}
+#topRegionNav .navLeft{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:9500;
+	}
+#index #mainRegionCenterContentInset{
+	display:block;
+	}
+#mainRegionLeftIntrol a{
+	color:white;
+	}
+#mainRegionLeftIntrol a:hover{
+	text-decoration:none;
+	}
+#mainRegionLeftIntro h2{
+	color:white;
+	}
+#mainRegionLeftIntro a:hover{
+	text-decoration:none;
+	}
+.articlesIndeed #mainRegionCenterContentInset{
+	display:block;
+	}
