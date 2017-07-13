@@ -16,3 +16,6 @@
 [submodule "Library/ckeditor_3.4"]
 	path = Library/ckeditor_3.4
 	url = https://github.com/CompassPointMedia/assets-ckeditor_3.4-modified
+[submodule "images/i"]
+	path = images/i
+	url = https://github.com/CompassPointMedia/assets-i.git
