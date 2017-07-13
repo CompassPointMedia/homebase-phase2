@@ -1,0 +1,4 @@
+AuthUserFile "/var/www/homebase/private/.htpasswds/admin/passwd"
+AuthType Basic
+AuthName "Admin Folder"
+require valid-user
