@@ -1,5 +1,5 @@
 <?php
-//$_d='-d "email=sam-git@compasspointmedia.com&password=secret"';
+//$_d='-d "email=sam-git@samuelfullman.com&password=secret"';
 //identify this script/GUI
 $localSys['scriptID']='gen_access1';
 $localSys['scriptVersion']='4.0';

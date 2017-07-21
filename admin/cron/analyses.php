@@ -123,12 +123,12 @@ if(false){ //----------------  not ready yet ----------------------
 										break;
 										case 'foundationdirector':
 											$person=array(
-												'FirstName'=>'Chuck',
-												'LastName'=>'Oerter',
-												'Email'=>'reroute@compasspointmedia.com',
+												'FirstName'=>'Samuel',
+												'LastName'=>'Fullman',
+												'Email'=>'samuelf@compasspoint-sw.com',
 											);
 									}
-									$emailTo='reroute@compasspointmedia.com';
+									$emailTo='samuelf@compasspoint-sw.com';
 									require($MASTER_COMPONENT_ROOT.'/emailsender_02.php');
 								}
 							}else{

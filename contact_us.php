@@ -58,7 +58,7 @@ var listens=0;
         </tr>
         <tr>
           <td valign="top">&nbsp;</td>
-          <td><?php js_email_encryptor('sfullman@compasspointmedia.com');?>
+          <td><?php js_email_encryptor('samuelf@compasspoint-sw.com');?>
           <br />
           (512) 754-7927<br />
           (512) 938-9018 Mobile </td>

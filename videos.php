@@ -91,7 +91,7 @@ if(!$hideSiteEditorLink){
 <span class="editor">[<a href="<?php echo $link?>" title="<?php echo $siteName?> real-time site editor"><?php echo $adminMode?'Leave ':''?>Site Editor</a>]</span>
 <?php } ?>
 <br />
-Great Locations &copy;2009 - Developed by <a href="http://www.compasspointmedia.com">Compass Point Media</a></div>
+Great Locations &copy;2009 - Developed by <a href="http://www.compasspoint-sw.com">Compass Point Media</a></div>
 </div>
 </body>
 </html><?php

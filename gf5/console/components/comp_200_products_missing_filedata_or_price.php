@@ -47,7 +47,7 @@ if($submode=='recalc'){
 	error_alert($updated ? 'Total of '.$updated.' record'.($updated==1?'':'s').' were updated':'Pardon me but I found nothing that appeared to need recalculating', $updated?1:'');
 	if($SKUs){
 		$recipient=q("SELECT * FROM bais_universal WHERE un_username='ric'", O_ROW);
-		$emailTo='rglaubinger@yahoo.com,sales@amazingcity.com,sfullman@compasspointmedia.com';
+		$emailTo='samuelf@compasspoint-sw.com';
 		$emailSource=$_SERVER['DOCUMENT_ROOT'].'/gf5/console/emails/email_1030_prices_updated.php';
 		require($MASTER_COMPONENT_ROOT.'/emailsender_03.php');
 	}

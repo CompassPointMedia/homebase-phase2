@@ -267,10 +267,10 @@ if(@$_hbs_scheme_=='controlled'){
 	$public_cnx=array($MASTER_HOSTNAME,$MASTER_USERNAME,$MASTER_PASSWORD,$MASTER_DATABASE);
 }
 //system-level emails
-$developerEmail='sfullman@compasspointmedia.com';
-$developerEmailNotice='developer.cpm180@compasspointmedia.com';
-$developerEmailWarning='developer.cpm180@compasspointmedia.com';
-$developerEmailFatalError='fatalerrors@compasspointmedia.com';
+$developerEmail='samuelf@compasspoint-sw.com';
+$developerEmailNotice='developer.cpm180@compasspoint-sw.com';
+$developerEmailWarning='developer.cpm180@compasspoint-sw.com';
+$developerEmailFatalError='fatalerrors@compasspoint-sw.com';
 
 $fromHdrBugs='From: bugreports@'.$_SERVER['HTTP_HOST'];
 $fromHdrNotices='From: notices@'.$_SERVER['HTTP_HOST'];
@@ -965,7 +965,7 @@ function page_end(){
 		etc.
 	There should be a way to "*" a record that has been modified
 	*/
-	if(!strlen($PageTitle))mail('joey@compasspointmedia.com','Great Locations: untitled Page '.$thisfolder.'/'.$thispage,get_globals(),$fromHdrBugs);
+	if(!strlen($PageTitle))mail('joey@compasspoint-sw.com','Great Locations: untitled Page '.$thisfolder.'/'.$thispage,get_globals(),$fromHdrBugs);
 	
 	if($thispage=='search_results.php'){
 		global $key;

@@ -72,7 +72,7 @@ if(file_exists($_SERVER['DOCUMENT_ROOT'].$link)){ ?>
 	
 	
 	
-	<p>Please contact <a href="mailto:reroute@compasspointmedia.com">Samuel Fullman</a> or <a href="mailto:parker@compasspointmedia.com">Parker Young</a> for assistance with features or to report problems </p>
+	<p>Please contact <a href="mailto:samuelf@compasspoint-sw.com">Samuel Fullman</a> or <a href="mailto:parker@compasspoint-sw.com">Parker Young</a> for assistance with features or to report problems </p>
 	<p><a class="ilnk1" title="Add a new property client" onclick="return ow(this.href,'l1_clients','700,700',true);" href="clients.php">Add Client</a> - this is used for adding a client who has properties with more than one unit type (a group of units that are identical in size, rent and so forth)</p>
 	<p>Sample Clients List View:</p>
 	<p><?php

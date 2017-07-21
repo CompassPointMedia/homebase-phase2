@@ -1878,7 +1878,7 @@ AddOnkeypressCommand('PropKeyPress(e)'); //if not declared already
 	<label>
 	<input name="data[ExportToEmail]" type="checkbox" id="data[ExportToEmail]" value="1" checked onchange="dChge(this);" /> 
 	export to email:</label>
-	<input name="data[ExportToEmailAddress]" type="text" id="data[ExportToEmailAddress]" value="sfullman@compasspointmedia.com,sales@amazingcity.com" size="50" class="" onfocus="if(this.value=='(email addresses, separate multiple by commas)'){this.value='';this.className='';}" onblur="if(this.value==''){this.value='(email addresses, separate multiple by commas)';this.className='gray';}" onchange="dChge(this);" />
+	<input name="data[ExportToEmailAddress]" type="text" id="data[ExportToEmailAddress]" value="samuelf@compasspoint-sw.com,sales@amazingcity.com" size="50" class="" onfocus="if(this.value=='(email addresses, separate multiple by commas)'){this.value='';this.className='';}" onblur="if(this.value==''){this.value='(email addresses, separate multiple by commas)';this.className='gray';}" onchange="dChge(this);" />
 	<em class="gray">(separate multiple by commas)</em>
 	<br />
 	<label>
@@ -1916,7 +1916,7 @@ AddOnkeypressCommand('PropKeyPress(e)'); //if not declared already
   [data] =&gt; Array
     (
       [ExportToEmail] =&gt; 1
-      [ExportToEmailAddress] =&gt; sfullman@compasspointmedia.com,sales@amazingcity.com
+      [ExportToEmailAddress] =&gt; sfullman@compasspoint-sw.com,sales@amazingcity.com
       [ExportAsAttachment] =&gt; 1
       [delimiter] =&gt; ,
       [ExportFileName] =&gt; kangaroo_%d:Ymd_His%_[%c%].csv

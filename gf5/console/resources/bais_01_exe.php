@@ -113,7 +113,7 @@ switch(true){
 		$localSys['scriptVersion']='4.0';
 	break;
 	default:
-		mail('reroute@compasspointmedia.com','error line '.__LINE__,$mode.' is not a recognized mode in page '.__FILE__,$fromHdrBugs);
+		mail('samuelf@compasspoint-sw.com','error line '.__LINE__,$mode.' is not a recognized mode in page '.__FILE__,$fromHdrBugs);
 }
 $localSys['build']=100;
 $localSys['buildDate']='2010-11-20 12:00';
@@ -972,7 +972,7 @@ switch(true){
 		}
 		if($mode==$insertMode){
 			mail(
-			$AcctBookkeeperEmail.',sfullman@compasspointmedia.com',
+			$AcctBookkeeperEmail.',samuelf@compasspoint-sw.com',
 			'Invoice '.$HeaderNumber.' submitted',
 			"Invoice #$HeaderNumber has been submitted by ".$_SESSION['admin']['firstName']. ' '.$_SESSION['admin']['lastName']."; this is a temporary email and will be replaced with an email with more details and a link to sign in and view the invoice automatically", 
 			'From: do_not_reply@sanmarcos.gldatabase.com'
@@ -3421,7 +3421,7 @@ switch(true){
 		require($COMPONENT_ROOT.'/comp_900_importmanager_v200.php');
 	break;
 	default:
-		mail('sfullman@compasspointmedia.com','error line '.__LINE__,$mode.' is not a recognized mode in page '.__FILE__,'From: bugreports@fantasticshop.com');
+		mail('sfullman@compasspoint-sw.com','error line '.__LINE__,$mode.' is not a recognized mode in page '.__FILE__,'From: bugreports@fantasticshop.com');
 }
 
 //navigation section - configured by each mode above
