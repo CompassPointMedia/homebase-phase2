@@ -18,6 +18,15 @@ $rd=mysqli_fetch_array($resource, MYSQLI_ASSOC) or die(mysqli_error($super_cnx))
 if(preg_match('#/gf[.0-9]+/#i',$_SERVER['PHP_SELF']) || $configMasterCall){
 	if(!$rd)exit('unable to find account '.$GCUserName);
 	if($rd['AcctStatus']!=='Current')exit('You account is not current.  Contact Great Locations staff');
+
+
+	/*
+	 * 2017-07-22 SF; bugfix
+	 * We are already very complex on the sequence to get settings.  We already HAVE MASTER_DATABASE, and it can't be defined in the db since we need it to vary based on environment for testing
+	 */
+	if(!empty($MASTER_DATABASE)) unset($rd['MASTER_DATABASE']);
+
+
 	extract($rd);
 	if(!function_exists('array_merge_accurate'))require($FUNCTION_ROOT.'/function_array_merge_accurate_v100.php');
 	if($ApplicationSettings){
@@ -43,4 +52,4 @@ if(preg_match('#/gf[.0-9]+/#i',$_SERVER['PHP_SELF']) || $configMasterCall){
 }else{
 	//it is assumed that they are either in public root files or possibly cgi
 }
-?>
+
